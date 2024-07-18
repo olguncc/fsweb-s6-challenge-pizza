@@ -1,48 +1,37 @@
 .home-container {
-  background-color: #ff5722;
-  background-image: url('https://github.com/olguncc/fsweb-s6-challenge-pizza/blob/main/public/assets/iteration-1/home-banner.png?raw=true');
-  background-size: cover;
-  background-position: center;
+  background-color: #e53e3e; /* Koyu kırmızı arka plan */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
   color: white;
-  padding: 20px;
+  text-align: center;
+  padding: 0 20px;
 }
 
 .home-logo {
   width: 150px;
+  height: auto;
   margin-bottom: 20px;
 }
 
 .home-title {
-  color: white;
   font-size: 4rem;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
 }
 
 .home-subtitle {
-  color: white;
   font-size: 2rem;
-  margin-bottom: 40px;
+  margin-bottom: 2rem;
 }
 
 .home-button {
-  background-color: #ffcc00;
+  background-color: #f6e05e; /* Sarı buton */
   color: black;
-  padding: 15px 30px;
-  font-size: 1.2rem;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
   text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-.home-button:hover {
-  background-color: #ffb700;
+  font-weight: bold;
 }

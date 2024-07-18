@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './HomePage.css';
-import logo from 'https://raw.githubusercontent.com/olguncc/fsweb-s6-challenge-pizza/946ee6fe1db5890ac80d72627200a6a1b45b9e2b/public/assets/iteration-1/logo.svg'; // Logo dosyasını import et
+import logo from 'https://raw.githubusercontent.com/olguncc/fsweb-s6-challenge-pizza/946ee6fe1db5890ac80d72627200a6a1b45b9e2b/public/assets/iteration-1/logo.svg';
 
 const HomePage = () => {
   return (

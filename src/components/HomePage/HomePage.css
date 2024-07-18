@@ -1,0 +1,45 @@
+/* Banner styles */
+.banner {
+  background-image: url('https://imgur.com/wdSTSpP');
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.banner h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.banner p {
+  font-size: 1.5rem;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+.banner button {
+  background-color: #ffc107;
+  color: black;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.banner button:hover {
+  background-color: #ffca28;
+}
+
+.logo {
+  width: 200px; 
+  height: auto; 
+  margin-bottom: 20px;
+}

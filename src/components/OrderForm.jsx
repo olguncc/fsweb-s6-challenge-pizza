@@ -32,6 +32,7 @@ const OrderForm = () => {
     try {
       const response = await axios.post('https://reqres.in/api/pizza', formData);
       console.log(response.data);
+      // Redirect or show confirmation message here
     } catch (error) {
       console.error(error);
     }

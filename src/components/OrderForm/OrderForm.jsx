@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './OrderForm.css';
 
 const OrderForm = () => {
   const [formData, setFormData] = useState({
@@ -32,30 +33,31 @@ const OrderForm = () => {
     try {
       const response = await axios.post('https://reqres.in/api/pizza', formData);
       console.log(response.data);
-    
+     
     } catch (error) {
       console.error(error);
     }
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center bg-gray-100">
-      <h1 className="text-3xl font-bold my-8">Position Absolute Acı Pizza</h1>
-      <form onSubmit={handleSubmit} className="bg-white p-8 rounded shadow-md w-3/4 max-w-lg">
-        <div className="mb-4">
-          <label className="block text-gray-700">İsim:</label>
+    <div className="order-form-container">
+      <h1 className="order-form-title">Position Absolute Acı Pizza</h1>
+      <form onSubmit={handleSubmit} className="order-form">
+        <div>
+          <label className="order-form-label">İsim:</label>
           <input
             type="text"
             name="isim"
             value={formData.isim}
             onChange={handleChange}
-            className="mt-1 p-2 w-full border rounded"
+            className="order-form-input"
             required
           />
         </div>
-        <div className="mb-4">
-          <label className="block text-gray-700">Boyut Seç:</label>
+          
           <div>
+          <label className="order-form-label">Boyut Seç:</label>
+          <div className="order-form-radio-group">
             <label>
               <input type="radio" name="boyut" value="Küçük" onChange={handleChange} /> Küçük
             </label>
@@ -67,38 +69,38 @@ const OrderForm = () => {
             </label>
           </div>
         </div>
-        <div className="mb-4">
-          <label className="block text-gray-700">Hamur Seç:</label>
-          <select name="hamur" onChange={handleChange} className="mt-1 p-2 w-full border rounded">
+        <div>
+          <label className="order-form-label">Hamur Seç:</label>
+          <select name="hamur" onChange={handleChange} className="order-form-select">
             <option value="Hamur Kalınlığı">Hamur Kalınlığı</option>
-            {/* Diğer seçenekler */}
+          
           </select>
         </div>
-        <div className="mb-4">
-          <label className="block text-gray-700">Ek Malzemeler:</label>
-          <div>
-            {/* Malzeme seçeneklerini checkbox olarak ekle */}
+        
+        <div>
+          <label className="order-form-label">Ek Malzemeler:</label>
+          <div className="order-form-checkbox-group">
             <label>
-              <input type="checkbox" name="malzemeler" value="Pepperoni" onChange={handleChange} /> Pepperoni
+              <input type="checkbox" name="malzemeler" value="Pepperoni" onChange={handleChange} className="order-form-checkbox" /> Pepperoni
             </label>
             <label>
-              <input type="checkbox" name="malzemeler" value="Sosis" onChange={handleChange} /> Sosis
+              <input type="checkbox" name="malzemeler" value="Sosis" onChange={handleChange} className="order-form-checkbox" /> Sosis
             </label>
-            {/* Diğer malzemeler */}
+          
           </div>
         </div>
-        <div className="mb-4">
-          <label className="block text-gray-700">Sipariş Notu:</label>
+        <div>
+          <label className="order-form-label">Sipariş Notu:</label>
           <textarea
             name="ozel"
             value={formData.ozel}
             onChange={handleChange}
-            className="mt-1 p-2 w-full border rounded"
+            className="order-form-textarea"
           />
         </div>
         <button
           type="submit"
-          className="bg-yellow-400 text-black py-2 px-4 rounded"
+          className="order-form-button"
           disabled={
             formData.isim.length < 3 ||
             !formData.boyut ||

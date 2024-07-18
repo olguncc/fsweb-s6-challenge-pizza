@@ -1,12 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './HomePage.css';
+import logo from 'https://raw.githubusercontent.com/olguncc/fsweb-s6-challenge-pizza/946ee6fe1db5890ac80d72627200a6a1b45b9e2b/public/assets/iteration-1/logo.svg'; // Logo dosyasını import et
 
 const HomePage = () => {
   return (
-    <div className="bg-red-700 min-h-screen flex flex-col justify-center items-center text-white">
-      <h1 className="text-4xl font-bold mb-4">Teknolojik Yemekler</h1>
-      <p className="text-2xl mb-8">KOD ACIKTIRIR PIZZA, DOYURUR</p>
-      <Link to="/order" className="bg-yellow-400 text-black py-2 px-4 rounded">
+    <div className="home-container">
+      <img src={logo} alt="Teknolojik Yemekler Logo" className="home-logo" />
+      <h1 className="home-title">Teknolojik Yemekler</h1>
+      <p className="home-subtitle">KOD ACIKTIRIR PIZZA, DOYURUR</p>
+      <Link to="/order" className="home-button">
         ACİKTIM
       </Link>
     </div>
